@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="font-Poppins">
+    <form class="bg-blue-400 p-10 flex flex-col gap-2" novalidate>
+      <!-- name -->
+      <input
+        class="appearance-none outline-none"
+        id="first-name"
+        type="text"
+        placeholder="First Name"
+        required
+        name="name"
+      />
+      <label
+        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        for="name"
+        id="first-name-error"
+      ></label>
+
+      <!-- last name -->
+      <input
+        class="appearance-none outline-none"
+        id="last-name"
+        type="text"
+        placeholder="Last Name"
+        required
+        name="lastname"
+      />
+      <label
+        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        for="lastname"
+        id="last-name-error"
+      ></label>
+
+      <input
+        class="appearance-none outline-none"
+        id="email"
+        type="email"
+        placeholder="Email Address"
+        name="email-name"
+        required
+      />
+      <label
+        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        for="email-name"
+        id="email-error"
+      ></label>
+
+      <input
+        class="appearance-none outline-none"
+        id="password"
+        type="password"
+        placeholder="Password"
+        required
+        name="password-name"
+      />
+      <label
+        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        for="password-name"
+        id="password-error"
+      ></label>
+
+      <!-- <div
+        class="uppercase bg-[#596e65] text-white flex justify-center transition-all opacity-100 duration-500 relative"
+        id="fake-button"
+        type="submit"
+        required
+      >
+        Claim your free trial
+      </div> -->
+
+      <!-- bg-[#37CC8A] -->
+      <button
+        class="uppercase bg-[#596e65] text-white transition-all duration-500"
+        id="real-button"
+        type="submit"
+        disabled
+        required
+      >
+        Claim your free trial
+      </button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
