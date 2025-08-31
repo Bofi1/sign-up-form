@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let form = document.getElementById("form");
 
-  let sent = document.getElementById("sent");
-
   firstName.addEventListener("input", () =>
     validation(
       firstName,
@@ -156,10 +154,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    realButton.classList.remove("submit-green");
+    realButton.classList.add("bg-[#596e65]");
+    realButton.setAttribute("disabled", true);
+    secuencereset();
+    reset();
+  });
 
+  function secuencereset() {
+    for (let i = 0; i < secuence.length; i++) {
+      secuence[i] = 0;
+    }
+  }
+
+  function reset() {
     firstName.value = "";
     lastName.value = "";
     email.value = "";
     password.value = "";
-  });
+  }
 });
