@@ -6,78 +6,104 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="font-Poppins">
-    <form class="bg-blue-400 p-10 flex flex-col gap-2" novalidate>
+  <body class="font-Poppins bg-[#FB8784]">
+    <form class="bg-white p-10 flex flex-col gap-4 rounded-2xl" novalidate>
       <!-- name -->
-      <input
-        class="appearance-none outline-none"
-        id="first-name"
-        type="text"
-        placeholder="First Name"
-        required
-        name="name"
-      />
+      <div class="relative">
+        <input
+          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+          id="first-name"
+          type="text"
+          placeholder="First Name"
+          required
+          name="name"
+        />
+        <img
+          class="absolute right-0 top-0 h-full flex hidden icon-error py-5 pr-4"
+          src="images/icon-error.svg"
+          alt=""
+        />
+      </div>
+
       <label
-        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
         for="name"
         id="first-name-error"
       ></label>
 
       <!-- last name -->
-      <input
-        class="appearance-none outline-none"
-        id="last-name"
-        type="text"
-        placeholder="Last Name"
-        required
-        name="lastname"
-      />
+      <div class="relative">
+        <input
+          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+          id="last-name"
+          type="text"
+          placeholder="Last Name"
+          required
+          name="lastname"
+        />
+
+        <img
+          class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
+          src="images/icon-error.svg"
+          alt=""
+        />
+      </div>
+
       <label
-        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
         for="lastname"
         id="last-name-error"
       ></label>
 
-      <input
-        class="appearance-none outline-none"
-        id="email"
-        type="email"
-        placeholder="Email Address"
-        name="email-name"
-        required
-      />
+      <!-- email -->
+      <div class="relative">
+        <input
+          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+          id="email"
+          type="email"
+          placeholder="Email Address"
+          name="email-name"
+          required
+        />
+        <img
+          class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
+          src="images/icon-error.svg"
+          alt=""
+        />
+      </div>
+
       <label
-        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
         for="email-name"
         id="email-error"
       ></label>
 
-      <input
-        class="appearance-none outline-none"
-        id="password"
-        type="password"
-        placeholder="Password"
-        required
-        name="password-name"
-      />
+      <!-- password -->
+      <div class="relative">
+        <input
+          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+          id="password"
+          type="password"
+          placeholder="Password"
+          required
+          name="password-name"
+        />
+        <img
+          class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
+          src="images/icon-error.svg"
+          alt=""
+        />
+      </div>
+
       <label
-        class="text-[#de7c7b] flex hidden -mt-1 justify-end text-sm"
+        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
         for="password-name"
         id="password-error"
       ></label>
 
-      <!-- <div
-        class="uppercase bg-[#596e65] text-white flex justify-center transition-all opacity-100 duration-500 relative"
-        id="fake-button"
-        type="submit"
-        required
-      >
-        Claim your free trial
-      </div> -->
-
-      <!-- bg-[#37CC8A] -->
+      <!-- submit button -->
       <button
-        class="uppercase bg-[#596e65] text-white transition-all duration-500"
+        class="uppercase bg-[#596e65] text-white transition-all duration-500 rounded-xl pl-5 py-4 font-bold"
         id="real-button"
         type="submit"
         disabled
