@@ -8,3 +8,13 @@
   border-width: 2px;
   border-color: #de7c7b;
 }
+.submit-green {
+  background: #37cc8a;
+  border-color: #33ab79;
+  border-top: 2px;
+  border-bottom: 4px;
+}
+
+.submit-green:hover {
+  background: #299765;
+}

@@ -1,117 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  class="desktop:h-full desktop:flex desktop:items-center desktop:justify-center"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="font-Poppins bg-[#FB8784]">
-    <form class="bg-white p-10 flex flex-col gap-4 rounded-2xl" novalidate>
-      <!-- name -->
-      <div class="relative">
-        <input
-          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
-          id="first-name"
-          type="text"
-          placeholder="First Name"
-          required
-          name="name"
-        />
-        <img
-          class="absolute right-0 top-0 h-full flex hidden icon-error py-5 pr-4"
-          src="images/icon-error.svg"
-          alt=""
-        />
+  <body
+    class="font-Poppins bg-[#FB8784] px-4 bg-[url(images/bg-intro-mobile.png)] desktop:bg-[url(images/bg-intro-desktop.png)] min-w-[300px] desktop:w-full desktop:max-w-[1440px] desktop:px-8"
+  >
+    <div
+      id="sent"
+      class="bg-[#4AAE4E] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 py-4 px-10 rounded-xl opacity-0 transition-all duration-500"
+    >
+      <img class="w-[50px]" src="images/check.png" alt="" />
+    </div>
+
+    <article
+      class="flex flex-col items-center my-20 desktop:flex-row desktop:my-0 desktop:justify-between"
+    >
+      <main class="flex flex-col items-center desktop:items-start">
+        <h1 class="font-bold text-white text-2xl desktop:text-5xl">
+          Learn to code by <br />
+          watching others
+        </h1>
+
+        <h2
+          class="text-center text-white px-4 mt-6 mb-14 desktop:text-start desktop:px-0 desktop:w-[500px]"
+        >
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </h2>
+      </main>
+
+      <div class="w-full desktop:max-w-[600px]">
+        <div
+          class="bg-[#5D54A3] flex justify-center py-5 text-white px-20 rounded-xl text-center shadow-[0_10px_1px_0px_rgba(0,0,0,0.2)] mb-5"
+        >
+          <h2 class="font-bold">
+            Try it free 7 days
+            <span class="font-[100]">then $20/mo. thereafter</span>
+          </h2>
+        </div>
+
+        <form
+          class="bg-white py-10 px-8 flex flex-col gap-4 rounded-2xl w-full shadow-[0_10px_1px_0px_rgba(0,0,0,0.2)]"
+          novalidate
+          id="form"
+        >
+          <!-- name -->
+          <div class="relative">
+            <input
+              class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+              id="first-name"
+              type="text"
+              placeholder="First Name"
+              required
+              name="name"
+            />
+            <img
+              class="absolute right-0 top-0 h-full flex hidden icon-error py-5 pr-4"
+              src="images/icon-error.svg"
+              alt=""
+            />
+          </div>
+
+          <label
+            class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
+            for="name"
+            id="first-name-error"
+          ></label>
+
+          <!-- last name -->
+          <div class="relative">
+            <input
+              class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+              id="last-name"
+              type="text"
+              placeholder="Last Name"
+              required
+              name="lastname"
+            />
+
+            <img
+              class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
+              src="images/icon-error.svg"
+              alt=""
+            />
+          </div>
+
+          <label
+            class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
+            for="lastname"
+            id="last-name-error"
+          ></label>
+
+          <!-- email -->
+          <div class="relative">
+            <input
+              class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+              id="email"
+              type="email"
+              placeholder="Email Address"
+              name="email-name"
+              required
+            />
+            <img
+              class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
+              src="images/icon-error.svg"
+              alt=""
+            />
+          </div>
+
+          <label
+            class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
+            for="email-name"
+            id="email-error"
+          ></label>
+
+          <!-- password -->
+          <div class="relative">
+            <input
+              class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
+              id="password"
+              type="password"
+              placeholder="Password"
+              required
+              name="password-name"
+            />
+            <img
+              class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
+              src="images/icon-error.svg"
+              alt=""
+            />
+          </div>
+
+          <label
+            class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
+            for="password-name"
+            id="password-error"
+          ></label>
+
+          <!-- submit button -->
+          <button
+            class="uppercase bg-[#596e65] text-white transition-all duration-500 rounded-xl pl-5 py-4 font-bold"
+            id="real-button"
+            type="submit"
+            disabled
+            required
+          >
+            Claim your free trial
+          </button>
+
+          <h2 class="text-[#C4C2CE] text-sm text-center">
+            By clicking the button, you are agreeing to out
+            <span class="text-[#de7c7b] font-bold"> Terms and Services</span>
+          </h2>
+        </form>
       </div>
-
-      <label
-        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
-        for="name"
-        id="first-name-error"
-      ></label>
-
-      <!-- last name -->
-      <div class="relative">
-        <input
-          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
-          id="last-name"
-          type="text"
-          placeholder="Last Name"
-          required
-          name="lastname"
-        />
-
-        <img
-          class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
-          src="images/icon-error.svg"
-          alt=""
-        />
-      </div>
-
-      <label
-        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
-        for="lastname"
-        id="last-name-error"
-      ></label>
-
-      <!-- email -->
-      <div class="relative">
-        <input
-          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
-          id="email"
-          type="email"
-          placeholder="Email Address"
-          name="email-name"
-          required
-        />
-        <img
-          class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
-          src="images/icon-error.svg"
-          alt=""
-        />
-      </div>
-
-      <label
-        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
-        for="email-name"
-        id="email-error"
-      ></label>
-
-      <!-- password -->
-      <div class="relative">
-        <input
-          class="appearance-none outline-none w-full rounded-xl pl-5 py-4 font-bold border-2"
-          id="password"
-          type="password"
-          placeholder="Password"
-          required
-          name="password-name"
-        />
-        <img
-          class="absolute right-0 top-0 h-full flex hidden icon-error py-4 pr-4"
-          src="images/icon-error.svg"
-          alt=""
-        />
-      </div>
-
-      <label
-        class="text-[#de7c7b] flex hidden justify-end text-sm -mt-3"
-        for="password-name"
-        id="password-error"
-      ></label>
-
-      <!-- submit button -->
-      <button
-        class="uppercase bg-[#596e65] text-white transition-all duration-500 rounded-xl pl-5 py-4 font-bold"
-        id="real-button"
-        type="submit"
-        disabled
-        required
-      >
-        Claim your free trial
-      </button>
-    </form>
+    </article>
 
     <script src="app.js"></script>
   </body>
